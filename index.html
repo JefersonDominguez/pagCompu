@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Byte Boost</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--fuente para el menu-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--fuente para byte-bost del header-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <!-- fuente para menú -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumar+One&display=swap"
+        rel="stylesheet">
+
+    <!-- FUENTE DE LETRA PARA EL FOOTER -->
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+
+    <!-- Para ver iconos de fontawesome de mi cuenta personal -->
+    <script src="https://kit.fontawesome.com/5312e324c6.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/a3de95d109.js" crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <header>
+        <div class="header_superior">
+            <div class="logo">
+                <div class="byte-boost-text">Byte-Boost</div>
+                <a href="index.html"><img src="imagenes/LOGO VERDADERO.png" alt="logo de empresa"
+                        style=" width: 65px; height: 62px;"></a>
+            </div>
+            <div class="principal">
+                <div class="search">
+                    <input type="search" placeholder="Buscar">
+                    <!-- <div class="loginyeso"> -->
+                    <a class="loginyeso" href="#"><img src="imagenes/login.png" alt="logo de usuario" width="26px" height="26px"></a>
+                    <a class="loginyeso" href="#"><img src="imagenes/like.png" alt="logo de corazon" width="26px" height="26px"></a>
+                    <a class="loginyeso" href="#"><img src="imagenes/shoping.png" alt="logo de bolsa" width="26px" height="26px"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu_contenedor">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" title="Pagina de web de inicio">INICIO</a></li>
+                        <li><a href="nosotros.html" title="Pagina web de Nosotros">NOSOTROS</a></li>
+                        <li><a href="contactanos.html" title="Pagina web de Contactanos">CONTACTANOS</a></li>
+                        <li><a href="pagina_pc.html" title="Pagina web de Pcs ">PC</a></li>
+                        <li><a href="page_laptop.html" title="Pagina web de laptops">LAPTOPS</a></li>
+                        <li><a href="pagina_procesadores.html" title="Página web de componentes">COMPONENTES</a></li>
+                        <li><a href="carrito_compras.html" title="Página web de carrito de compras"><img src="imagenes/carritocompras.png" alt="logo de carrito de compras" height="26px"
+                                    width="26px"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="contItemsCarrusel">
+        <!--ITEM 1-->
+        <div class="itemCarrusel" active id="itemCarrusel-1">
+            <div class="tarjetaCarrusel" id="tarjetaCarrusel-1">
+                <div class="divclass">
+                    <div class="seccion1">
+                        <div class="carrusel">
+                            <img src="imagenes/pc1_CARRUSEL1.jpg" alt="logo de pc1" width="351" height="330">
+                        </div>
+                        <div class="container">
+                            <div class="product-details">
+                                <p class="llevate">Llévate gratis: + Auricular lúdico + Cámara web + Adaptador wifi</p>
+                                <p class="price">
+                                <p><b>ANTES: </b> S/.7,699.00</p>
+                                <p><b>AHORA: </b> S/.5,699.00</p>
+                                </p>
+                                <div class="oferta">
+                                    <p class="offer">GET UP TO 40% OFF!</p>
+                                </div>
+
+                                <div id="circulos">
+                                    <div class="circle" id="circle1"></div>
+                                    <div class="circle" id="circle2"></div>
+                                    <div class="circle" id="circle3"></div>
+                                </div>
+
+                                <button class="add-to-cart-carrusel"><img src="imagenes/compras.png" alt="carrito de compras"
+                                        width="30px" height="30px">
+                                    Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="infoprod">
+                        <center>
+                            <strong>
+                                <ul class="no-points">
+
+                                    <li>Intel Core i9-13900K 3.0GHz/5.8GHz</li>
+                                    <li>24 núcleos, 32 hilos, 36MB caché</li>
+                                    <li>Disco Sólido SSD M.2 1TB NVMe PCle</li>
+                                    <li>Memoria RAM 32GB DDR5 5200MHz</li>
+                                    <li>Tarjeta Madre B760</li>
+                                    <li>Tarjeta de Video RTX4060 8GB</li>
+                                    <li>Monitor Samsung ODYSSEY Curvo 27" 144Hz</li>
+                                    <li>Fuente de Poder 850W GOLD GAMME MAXEnfriamiento líquido 240R</li>
+
+                                </ul>
+                            </strong>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <!-- Contenedor de las flechas derecha e izquierda de un item del carrusel-->
+            <div class="flechaCarrusel">
+                <a href="#itemCarrusel-3" title="Flecha izquierda">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+
+                <a href="#itemCarrusel-2" title="Flecha derecha">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!--ITEM 2-->
+        <div class="itemCarrusel" id="itemCarrusel-2">
+            <div class="tarjetaCarrusel" id="tarjetaCarrusel-2">
+                <div class="divclass">
+                    <div class="seccion1">
+                        <div class="carrusel">
+                            <img src="imagenes/pc1_CARRUSEL2.jpg" alt="logo de pc2" width="351" height="330">
+                        </div>
+                        <div class="container">
+                            <div class="product-details">
+                                <p class="llevate">Llévate gratis: + Auricular lúdico + Cámara web + Adaptador wifi</p>
+                                <p class="price">
+                                <p><b>ANTES: </b> S/.7,699.00</p>
+                                <p><b>AHORA: </b> S/.5,699.00</p>
+                                </p>
+                                <div class="oferta">
+                                    <p class="offer">GET UP TO 40% OFF!</p>
+                                </div>
+
+                                <div id="circulos">
+                                    <div class="circle" id="circle1"></div>
+                                    <div class="circle" id="circle2"></div>
+                                    <div class="circle" id="circle3"></div>
+                                </div>
+
+
+                                <button class="add-to-cart-carrusel"><img src="imagenes/compras.png" alt="carrito de compras"
+                                        width="30px" height="30px">
+                                    Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="infoprod">
+                        <center>
+                            <strong>
+                            <ul class="no-points">
+
+                                    <li>Intel Core i9-13900K 3.0GHz/5.8GHz</li>
+                                    <li>24 núcleos, 32 hilos, 36MB caché</li>
+                                    <li>Disco Sólido SSD M.2 1TB NVMe PCle</li>
+                                    <li>Memoria RAM 32GB DDR5 5200MHz</li>
+                                    <li>Tarjeta Madre B760</li>
+                                    <li>Tarjeta de Video RTX4060 8GB</li>
+                                    <li>Monitor Samsung ODYSSEY Curvo 27" 144Hz</li>
+                                    <li>Fuente de Poder 850W GOLD GAMME MAXEnfriamiento líquido 240R</li>
+
+                            </ul>
+                        </strong>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <!-- Contenedor de las flechas derecha e izquierda de un item del carrusel-->
+            <div class="flechaCarrusel">
+                <a href="#itemCarrusel-1" title="Flecha izquierda">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+
+                <a href="#itemCarrusel-3" title="Flecha derecha">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!--ITEM 3-->
+        <div class="itemCarrusel" id="itemCarrusel-3">
+            <div class="tarjetaCarrusel" id="tarjetaCarrusel-3">
+                <div class="divclass">
+                    <div class="seccion1">
+                        <div class="carrusel">
+                            <img src="imagenes/pc1_CARRUSEL3.jpg" alt="logo de pc3" width="351" height="330">
+                        </div>
+                        <div class="container">
+                            <div class="product-details">
+                                <p class="llevate">Llévate gratis: + Auricular lúdico + Cámara web + Adaptador wifi</p>
+                                <p class="price">
+                                <p><b>ANTES: </b> S/.7,699.00</p>
+                                <p><b>AHORA: </b> S/.5,699.00</p>
+                                </p>
+                                <div class="oferta">
+                                    <p class="offer">GET UP TO 40% OFF!</p>
+                                </div>
+
+                                <div id="circulos">
+                                    <div class="circle" id="circle1"></div>
+                                    <div class="circle" id="circle2"></div>
+                                    <div class="circle" id="circle3"></div>
+                                </div>
+
+                                <button class="add-to-cart-carrusel"><img src="imagenes/compras.png" alt="carrito de compras"
+                                        width="30px" height="30px">
+                                    Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="infoprod">
+                        <center>
+                            <strong>
+                            <ul class="no-points">
+
+                                    <li>Intel Core i9-13900K 3.0GHz/5.8GHz</li>
+                                    <li>24 núcleos, 32 hilos, 36MB caché</li>
+                                    <li>Disco Sólido SSD M.2 1TB NVMe PCle</li>
+                                    <li>Memoria RAM 32GB DDR5 5200MHz</li>
+                                    <li>Tarjeta Madre B760</li>
+                                    <li>Tarjeta de Video RTX4060 8GB</li>
+                                    <li>Monitor Samsung ODYSSEY Curvo 27" 144Hz</li>
+                                    <li>Fuente de Poder 850W GOLD GAMME MAXEnfriamiento líquido 240R</li>
+
+                            </ul>
+                        </strong>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenedor de las flechas derecha e izquierda de un item del carrusel-->
+            <div class="flechaCarrusel">
+                <a href="#itemCarrusel-2" title="Flecha izquierda">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+
+                <a href="#itemCarrusel-1" title="Flecha derecha">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div id="message"></div>
+        <script src="mensajecolor.js"></script>
+    </div>
+
+
+    <!--PARA LOS MAS PRODUCTOS-->
+
+    <br>
+    <div class="bodypod">
+        <div class="containerprod">
+            <h1>Mas productos</h1>
+            <div class="product-matrix">
+                <div class="product-item">
+                    <img src="imagenes/PC_PROD1.jpg" alt="logo de pc_prod1" width="285" height="226">
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>PC Gamer Draco RGB Core 17 6th</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.1999</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                            <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/PC_PROD2.jpg"  alt="logo de pc_prod2" width="285" height="226">
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>PC Gamer Draco Red Core 17 8th</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.2499</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                        <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/PC_PROD3.jpg"  alt="logo de pc_prod3" width="285" height="226">
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>PC Gamer Draco Green Core 15 12400F</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.2999</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                        <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/LAPTOP1PROD.jpg"  alt="logo de laptop1" width="285" height="226">
+
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>Laptop HP 255 G10 15.6" Ryzen 3 7330U</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.2199</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                        <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/LAPTOP2PROD.jpg"  alt="logo de laptop2" width="285" height="226">
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>Laptop Lenovo V15 G3 AIP 15.6" Core 15 1235U</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.2549</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                        <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/LAPTOP3PROD.jpg"  alt="logo de laptop3" width="285" height="226">
+
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>Laptop Dell Inspiron 3520 15.6" FHD Core 15 1235U</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.2499</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                        <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/CWEBPROD1.jpg" alt="logo de cweb1" width="285" height="226">
+
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>Cámara Web (Web-Cam) HD 4K 8MP</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.129</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                        <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/AURIPROD2.jpg" alt="logo de auricular1" width="285" height="226">
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>Auricular Gamer Halion S2 Dragon Rojo</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.69</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                        <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/ANTIPROD3.jpg" alt="logo de antivirus 3" width="285" height="226">
+                    <div class="prod-details">
+                        <div class="odenventa">
+                            <div class="product-name">
+                                <p>Antivirus NOD 32 (Físico En Caja Para 3PC)</p>
+                            </div>
+                            <div class="price2">
+                                <p>S/.179</p>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-left">
+                        <button class="add-to-cart"><img src="imagenes/compras.png" alt="carrito de compras" width="20"
+                                height="20">
+                            Agregar al carrito</button>
+                        </div>
+                    </div>
+
+                </div> <!--NO SE PUEDE AGREGAR AL CARRITO-->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--PIE DE PAGINA-->
+    <footer>
+        <div class="footer">
+            <div class="footer1">
+                <div class="tecnico">
+                    <img class="imagen" src="imagenes/SOPORTE.png" alt="logo de soporte" style=" width: 65px; height: 62px;">
+                    <h4>Ensamblado por expertos</h4>
+                    <p>Todos los equipos son ensamblados</p>
+                    <p>y pasan por pruebas de</p>
+                    <p>rendimiento/estabilidad</p>
+
+                    <!-- <img src="imagenes/foter1.jpeg" alt="" width="1348px" height="230px"> -->
+                </div>
+                <div class="tecnico">
+                    <img class="imagen" src="imagenes/CALENDARIO.png" alt="logo de calendario" style=" width: 65px; height: 62px;">
+                    <h4>12 Meses de Garantía</h4>
+                    <p>Todos los componentes tienen</p>
+                    <p>garantia individual por falla de</p>
+                    <p>fábrica</p>
+                </div>
+                <div class="tecnico">
+                    <img class="imagen" src="imagenes/SATISFACCION.png" alt="logo de satisfaccion" style=" width: 65px; height: 62px;">
+                    <h4>Satisfacción Garantizada</h4>
+                    <p>Se eligió cuidadosamente cada</p>
+                    <p>componente para garantizar el</p>
+                    <P>máximo rendimiento de un equipo</P>
+                </div>
+            </div>
+
+            <div class="finalpiepagina2">
+                <div class="piedepagina2">
+                    <div class="logofinal">
+                        <img src="imagenes/LOGO VERDADERO.png" alt="logo de empresa"
+                            style="width: 65px; height: 62px; margin-left: 25px;">
+                        <div class="AladoLogo">¡Expertos en Tecnologia!</div>
+                    </div>
+                    <div class="logosderedessociales">
+
+                    </div>
+                    <div class="info">
+                        <h3 style="font-family: Inder, sans-serif">Información</h3>
+                        <p class="ainfo">Nuestras Tiendas</p>
+                        <p class="ainfo">Sobre Nosotros</p>
+                    </div>
+                    <div class="info">
+                        <h3 style="font-family: Inder, sans-serif">Políticas</h3>
+                        <p class="ainfo">Términos y condiciones</p>
+                        <p class="ainfo">Política de cookies</p>
+                        <p class="ainfo">Política de datos personales</p>
+                    </div>
+                    <div class="info">
+                        <h3 style="font-family: Inder, sans-serif">Contactos</h3>
+                        <p class="ainfo">Líneas Telefónicas</p>
+                        <p class="ainfo">945 458 125</p>
+                        <p class="ainfo">986 524 781</p>
+                    </div>
+
+                    <div>
+                        <a href="libroreclamo.html"><img src="img/libro_reclamacion.png" alt="logo de libro de reclamaciones"
+                            style="width:130px; height: 72px; margin-top: 10px;"></a>
+                    </div>
+                </div>
+
+                <div class="final">
+                    <div class="logosnegros">
+                        <a href="https://www.facebook.com/profile.php?id=61558654092768&mibextid=ZbWKwL" title=""
+                            target="_blank"> <img src="img/facebook_negro.png" alt="Facebook negro" height="40px"
+                                width="40px"></a>
+                        <a href="https://www.instagram.com/byte_boostcomponents/" title="" target="_blank"> <img
+                                src="img/instagram_negro.png" alt="Instagram negro" height="40px" width="40px"></a>
+                        <a href="https://chat.whatsapp.com/LdrAbWf2tdd5ECxmdc2uLo" title="" target="_blank"> <img
+                                src="img/whatsapp_negro.png" alt="WhatsApp negro" height="40px" width="40px"></a>
+                        <a href="https://www.tiktok.com/@byteboost4?is_from_webapp=1&sender_device=pc" title="" target="_blank">
+                            <img src="img/tik-tok_negro.png" alt="Tik-tok negro" height="40px" width="40px"></a>
+                        <a href="https://www.youtube.com/channel/UCGtY66iHcW5RE_0PVPvHQ5Q" title="" target="_blank"> <img
+                                src="img/youtube_negro.png" alt="Youtube negro" height="40px" width="40px"></a>
+                    </div>
+
+                    <div>
+                        <p class="derechosrese">© 2024 Byte Boost Computer. Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

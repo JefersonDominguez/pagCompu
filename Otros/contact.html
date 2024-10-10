@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Byte Boost</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--fuete para el menu-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--fuente para byte-bost del header-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <!--fuente para men-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumar+One&display=swap"
+        rel="stylesheet">
+
+    <!-- FUENTE DE LETRA PARA EL FOOTER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+    }
+
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+    }
+
+    .header_superior {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px;
+    }
+
+    .logo img {
+        /* width: 60px;
+    height: 62px; */
+        padding: 0px 0px 0px 5px;
+    }
+
+    .byte-boost-text {
+        font-family: "Kumar One", serif;
+        font-size: 20px;
+        margin-top: 10%;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .search input {
+        width: 300px;
+        padding: 10px;
+        background: #F2EFE5;
+        border-radius: 5px;
+        border: 0.2px solid #BBBBBB;
+    }
+
+    .loginyeso {
+        margin: 10px 8px 0px 3px;
+    }
+
+    .principal {
+        display: flex;
+
+    }
+
+    /* BARRA MENU */
+    .menu_contenedor {
+        width: 100%;
+        height: 70%;
+        background: #FFD500;
+        padding: 0px 20px;
+
+    }
+
+
+    .menu {
+        max-width: 1200px;
+        margin: auto;
+        height: 100%;
+        font-family: "Inter", sans-serif;
+
+    }
+
+    nav {
+        height: 100%;
+
+    }
+
+    nav>ul {
+        height: 100%;
+        display: flex;
+
+    }
+
+    nav>ul>li {
+        height: 100%;
+        list-style: none;
+        position: relative;
+
+    }
+
+    nav>ul>li>a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        color: black;
+        align-items: center;
+        padding: 20px;
+        list-style: none;
+        font-size: 14px;
+        transition: all 300ms ease;
+    }
+
+    nav>ul>li>a:hover {
+        transform: scale(1.1);
+        background: #FFD500;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+    }
+
+    .paddinprincipal{
+        padding: 160px 0px 20px 0px;
+    }
+
+    .info {
+        border: 5px solid;
+        height: 30px;
+        width: 350px;
+        margin: 10px;
+        background-color: #FFD500;
+        font-size: 20 px;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: 20 px;
+        word-wrap: break-word;
+    }
+
+    .container {
+        border-style: none;
+        border-width: 0;
+        background-color: white;
+        margin: 10px;
+    }
+
+    .text-border {
+        border: 1px solid rgb(186, 113, 44);
+    }
+
+    .direccion {
+        margin: 10;
+        padding: 10;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: xx-small;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #img1 {
+        float: left;
+        width: 300px;
+        height: 200px;
+        border-radius: 5%;
+        margin: 1%;
+    }
+
+    .datosredes {
+        margin-top: 0.5%;
+        display: flex;
+    }
+
+    .formulario {
+        display: flex;
+    }
+
+    .tituloformulario {
+        background: #FFD500;
+    }
+
+    .footer1 {
+        display: flex;
+    }
+
+    .footer2 {
+        display: flex;
+    }
+
+    .seccionfooter {
+        margin-right: 100px;
+    }
+
+    .input-with-icon {
+        background: url('imagenes/lupa.png') no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 1rem;
+        padding-right: 2.5rem;
+        /* espacio para el icono */
+    }
+
+    .input-with-icon::placeholder {
+        color: #9ca3af;
+        /* color del placeholder */
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header_superior">
+            <div class="logo">
+                <div class="byte-boost-text">Byte-Boost</div>
+                <a href="index.html"><img src="imagenes/LOGO VERDADERO.png" alt=""
+                        style=" width: 65px; height: 62px;"></a>
+            </div>
+            <div class="principal">
+                <div class="search">
+                    <input type="search" placeholder="Buscar">
+                    <!-- <div class="loginyeso"> -->
+                    <a class="loginyeso" href="#"><img src="imagenes/login.png" alt="" width="26px" height="26px"></a>
+                    <a class="loginyeso" href="#"><img src="imagenes/like.png" alt="" width="26px" height="26px"></a>
+                    <a class="loginyeso" href="#"><img src="imagenes/shoping.png" alt="" width="26px" height="26px"></a>
+                </div>
+            </div>
+        </div>
+        <div class="menu_contenedor">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="#">NOSOTROS</a></li>
+                        <li><a href="contactanos.html">CONTACTANOS</a></li>
+                        <li><a href="pagina_pc.html">PC</a></li>
+                        <li><a href="page_laptop.html">LAPTOPS</a></li>
+                        <li><a href="#">COMPONENTES</a></li>
+                        <li><a href="#"><img src="imagenes/carritocompras.png" alt="" height="26px" width="26px"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <body>
+        <!--Texto informátivo de la empresa-->
+        <div class="paddinprincipal">
+            <!--Tamaño de texto, para que respete el salto de linea y margenes text-xs-->
+            <p class="text-xs whitespace-pre-line mr-2 ml-2 mb-1">
+                Byte-Boost es una empresa mayorista con mas de 10 años en el mercado conectando tecnología, que
+                comercializa equipos de computo, componentes, suministros y periféricos
+                con un amplio y variado stock de productos y a la vez brinda servicios de soporte a sus clientes.
+                El año 2020 la empresa decidió certificar sus Sistema de Gestión de Calidad bajo la norma Internacional
+                ISO 9001-2000 que le permite competir con empresas consolidadas en
+                el país.
+            </p>
+        </div>
+
+        <!--Mapa y datos de redes sociales-->
+        <div class="datosredes">
+            <div class="container" style="float:left">
+                <!--img id="img1" src="/img/mapa.png" alt="MDN" with="800"-->
+                <!--iframe src=”https://xxxxxxxxxx” width=”600” height=”450” frameborder=”0” style=”border:0;” allowfullscreen=”" aria-hidden="false" tabindex="0"></iframe-->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.9274229424736!2d-77.04006712278802!3d-12.053506589873846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9a9a194b201%3A0x2dbc87a3737118d0!2sMi%20PC%20Lista%20-%20Todo%20en%20Computadoras%20y%20Laptops!5e0!3m2!1ses!2spe!4v1715973275943!5m2!1ses!2spe"
+                    width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="container" style="padding-right: 5%;float:right">
+                <div class="info">
+                    <a href="https://api.whatsapp.com/send?phone=51999016780" class="btn-wsp" target="_blank">
+                        <img src="img/whatsapp.png" class="imagen" alt="MDN" width="18" height="8" /> </a>
+                    <p style="margin-top: -20px">999017680 - 999921319</p>
+                </div>
+                <div class="info">
+                    <img src="img/facebook.png" class="imagen" alt="MDN" width="20" height="8" />
+                    <p style="margin-top: -21px">Componentes Electrónicos Byte Boost</p>
+                </div>
+                <div class="info">
+                    <img src="img/instagram.png" class="imagen" alt="MDN" width="15" height="8" />
+                    <p style="margin-top: -18px">Byte_Boost</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="formulario">
+            <!--Dirección-->
+            <div class="direccion">
+                <p class="text-base whitespace">
+                    Te estamos esperando en :
+                    Av. Canaval y Moreyra 525, San Isidro, Lima - Perú.
+                </p>
+                <p class="text-base font-bold">
+                    HORARIO DE ATENCION:
+                </p>
+                <p class="text-base whitespace-pre-line">
+                    Lunes - Viernes : 9:30 am - 10:40 pm
+                    Sábados - Domingos : 9:30 am - 7:40 pm
+                </p>
+            </div>
+
+            <!--Formulario-->
+            <div class="container ml-auto mr-auto flex items-center justify-center">
+                <div class="w-30 md:w-11/20 border rounded-md p-3 bg-yellow-300">
+                    <p class="tituloformulario">Nuestro equipo se pondrá en contacto contigo</p>
+                    <form id="myForm" class="bg-yellow-300 px-2 pt-4 pb-1 mb-1">
+                        <div class="mb-1">
+                            <div class="grid grid-flow-row sm:grid-flow-col gap-3 space-y-4">
+                                <div class="sm:col-span4 justify-center">
+                                    <label class="block text-gray-500 text-sm font-bold" form="nombre" Nombres></label>
+                                    <input
+                                        class="shadow apperance-none border rounded w-80 py-2 px-3 text-gray-500 leading-thight focus outline-none focus-shadow-outline"
+                                        id="nombre" name="nombre" type="text" placeholder="Nombres*" required></input>
+
+                                    <label class="block text-gray-500 text-sm font-bold mb-1" form="apellido"
+                                        Apellidos></label>
+                                    <input
+                                        class="shadow apperance-none border rounded w-80 py-2 px-3 text-gray-500 leading-thight focus outline-none focus-shadow-outline"
+                                        id="apellido" name="apellido" type="text" placeholder="Apellidos*"
+                                        required></input>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <div class="sm:col-span4 justify-center">
+                                <label class="block text-gray-500 text-sm font-bold mb-1" form="telefono"
+                                    Teléfono></label>
+                                <input
+                                    class="shadow apperance-none border rounded w-80 py-2 px-3 text-gray-500 leading-thight focus outline-none focus-shadow-outline"
+                                    id="telefono" name="telefono" type="text" placeholder="99921319*" required></input>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <div class="sm:col-span4 justify-center">
+                                <label class="block text-gray-500 text-sm font-bold mb-1" form="mensaje"
+                                    Mensaje></label>
+                                <textarea
+                                    class="shadow apperance-none border rounded w-80 py-1 px-30 text-gray-500 leading-thight focus outline-none focus-shadow-outline"
+                                    id="mensaje" name="mensaje" placeholder="Registre su mensaje*" required>
+                            </textarea>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center mt-1">
+                            <button type="submit"
+                                class="bg-yellow-500 hover:bg-white text-black font-bold py-2 px-5 rounded focus:outline-none focus-shadow-outline">
+                                Enviar
+                            </button>
+                        </div>
+
+                    </form>
+                    <hr>
+                    <h3 id="respuesta" class="text-center "> </h3>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"> </script>
+
+
+        <!--PIE DE PAGINA-->
+        <footer>
+            <div class="seccionfooter w-full md:w-11/20 border rounded-md p-3 bg-gray-500 p-4">
+                <div class="footer1 justify-between">
+                    <div>
+                        <img src="imagenes/LOGO VERDADERO.png" class="w-10 h-10" >
+                    </div>
+
+                    <div>
+                        <p class="font-sans text-sm text-white">Expertos en tecnología</p>
+                    </div>
+
+                    <div>
+                        <p class="font-sans text-sm text-white">Información</p>
+                        <p class="font-sans text-xs text-white">Nuestras Tiendas</p>
+                        <p class="font-sans text-xs text-white">Sobre Nosotros</p>
+                    </div>
+
+                    <div>
+                        <p class="font-sans text-sm text-white">Políticas</p>
+                        <p class="font-sans text-xs text-white">Términos y condiciones</p>
+                        <p class="font-sans text-xs text-white">Política de cookies</p>
+                        <p class="font-sans text-xs text-white">Política de datos personales</p>
+                    </div>
+
+                    <div>
+                        <p class="font-sans text-sm text-white">Contactos</p>
+                        <p class="font-sans text-xs text-white">Líneas telefónicas</p>
+                        <p class="font-sans text-xs text-white">945 458 125</p>
+                        <p class="font-sans text-xs text-white">986 524 781</p>
+                    </div>
+
+                    <div>
+                        <img src="imagenes/libro_reclamacion.png" class="w-20 h-15 mt-1">
+                    </div>
+                </div>
+
+                <div class="footer2 space-x-2.5">
+                    <div>
+                        <img src="img/facebook_negro.png" class="w-5 h-5">
+                    </div>
+
+                    <div>
+                        <img src="img/instagram_negro.png" class="w-5 h-5">
+                    </div>
+
+                    <div>
+                        <img src="img/whatsapp_negro.png" class="w-5 h-5">
+                    </div>
+
+                    <div>
+                        <img src="img/tik-tok_negro.png" class="w-5 h-5">
+                    </div>
+
+                    <div>
+                        <img src="img/youtube_negro.png" class="w-5 h-5">
+                    </div>
+
+                    <div>
+                        <p class="font-sans text-xs text-white text-right">© 2024 Byte Boost Computer. Todos los
+                            derechos
+                            reservados</p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,775 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+.header_superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+}
+
+.logo img {
+    /* width: 60px;
+    height: 62px; */
+    padding: 0px 0px 0px 5px;
+}
+
+.byte-boost-text {
+    font-family: "Kumar One", serif;
+    font-size: 20px;
+    margin-top: 10%;
+}
+
+.logo {
+    display: flex;
+}
+
+.search {
+    display: flex;
+    margin: 5px;
+}
+
+.search input {
+    width: 300px;
+    padding: 10px;
+    background: #F2EFE5;
+    border-radius: 5px;
+    border: 0.2px solid #BBBBBB;
+}
+
+.loginyeso {
+    margin: 10px 8px 10px 5px;
+}
+
+
+.principal {
+    display: flex;
+}
+
+/* BARRA MENU */
+.menu_contenedor {
+    width: 100%;
+    height: 70%;
+    background: #FFD500;
+    padding: 0px 20px;
+
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+nav {
+    height: 100%;
+    justify-content: space-between;
+}
+
+nav>ul {
+    height: 100%;
+    display: flex;
+}
+
+nav>ul>li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: black;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 50px;
+
+    list-style: none;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+nav>ul>li>a:hover {
+    transform: scale(1.1);
+    background: #FFD500;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+}
+
+.header {
+    background-color: #f9f9f9;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.product-details {
+    margin-top: 20px;
+}
+
+.price {
+    color: #474747;
+    font-size: 1.4em;
+    font-family: "Inter", sans-serif;
+}
+
+.add-to-cart-left{
+    margin-left: 190px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    /*display: inline-block;*/
+    margin-top: 20px;
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-cart-carrusel {
+    background-color: #007bff;
+    color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-decoration: none;
+    /*display: inline-block;*/
+    margin-top: 20px;
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-cart img {
+    margin-right: 10px;
+}
+
+/* Hover */
+.add-to-cart:hover {
+    background-color: blue;
+    /* Cambie esto al color que desee que tenga el botón cuando se pase el puntero del mouse por encima */
+    border: 2px sólido orange;
+    /* Cambie esto al color que desee que tenga el borde cuando se pase el puntero del mouse por encima */
+    color: white;
+    /* Cambie esto al color que desee que tenga el texto cuando se pase el puntero del mouse por encima */
+}
+
+/* Active (clicked) */
+.add-to-cart:active {
+    background-color: gray;
+    /* Cambie esto al color que desee que tenga el botón cuando se haga clic en él */
+    border: 2px sólido black;
+    /* Cambie esto al color que desee que tenga el borde cuando se haga clic en él */
+    color: white;
+    /* Cambie esto al color que desee que tenga el texto cuando se haga clic en él */
+}
+
+.oferta {
+    background: #c2e5ff;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    height: 70px;
+    /* Altura del contenedor */
+    width: 300px;
+    /* Ancho del contenedor */
+    text-align: center;
+    /* Asegura que el texto esté centrado dentro del párrafo */
+}
+
+.offer {
+    color: #0094FF;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3%;
+}
+
+
+
+.llevate {
+    font-family: "Inter", sans-serif;
+    color: #555555;
+}
+
+.infoprod {
+    margin: 50px 20px 30px 40px;
+    justify-content: center;
+}
+
+/*PARA LOS MAS PRODUCTOS DE MATRIS*/
+.bodyprd {
+    font-family: Arial, sans-serif;
+}
+
+.containerprod {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.odenventa {
+    display: flex;
+}
+
+.product-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.product-item {
+    margin-bottom: 20px;
+    border: 0.2px solid #BBBBBB;
+    border-radius: 8px;
+    margin-top: 2%;
+    box-shadow: 0px 5px 15px rgba(155, 153, 153, 0.25);
+}
+
+.product-name {
+    font-size: 1.2em;
+    font-family: "Inter", sans-serif;
+    margin: 0px 10px 2px 10px;
+}
+
+.prod-details {
+    margin-top: 10px;
+}
+
+.price2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0px 10px 2px 0px;
+}
+
+.piedepagina1 {
+    width: 100%;
+    height: 70%;
+    background: #F5F4F9;
+    padding: 0px 20px;
+}
+
+.finalpiepagina2 {
+    border: 2px solid #000;
+    /* Borde del div contenedor */
+    background-color: #5B5B5F;
+    /* Color de fondo del div contenedor (opcional) */
+}
+
+.piedepagina2 {
+    width: 100%;
+    height: 70%;
+    background: #5B5B5F;
+    padding: 0px 20px;
+
+    display: flex;
+    margin: auto;
+    position: relative;
+    padding: 10px 10px;
+}
+
+
+/* PARA EL FOOTER */
+.footer1 {
+    display: flex;
+
+    background-color: #f0f0f0;
+    /* Color de fondo del div contenedor (opcional) */
+    padding: 10px 3px;
+}
+
+.imagen {
+    padding: 0px 0px 10px 0px;
+    margin-left: 10px;
+}
+
+.tecnico {
+    margin-top: 10px 0px 10px 0px;
+    margin: 0px 100px 0px 100px;
+    display: grid;
+    place-items: center;
+}
+
+.info {
+    margin: 0px 80px 0px 0px;
+    color: #FFFFFF;
+    font-family: "Inder", sans-serif;
+    /*NO LEE LA FUENTE*/
+    padding: 3px 30px;
+}
+
+.ainfo {
+    font-style: none;
+}
+
+.AladoLogo {
+    margin: 0px 10px 0px 0px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.derechosrese {
+    color: white;
+    padding-top: 10px;
+    padding-left: 100px;
+}
+
+.logofinal {
+    display: flex;
+}
+
+.final {
+    display: flex;
+    padding: 10px;
+}
+
+.logosnegros {
+    gap: 10px;
+    display: flex;
+}
+
+.texto-intro {
+    margin-top: 130px;
+}
+
+.mapa {
+    margin-top: 10px;
+    margin-left: 40px;
+    /* Mueve el iframe 20px a la derecha */
+}
+
+.infologo {
+    border: 5px solid;
+    height: 40px;
+    width: 450px;
+    margin: 10px;
+    background-color: #FFD500;
+    font-size: 30 px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 20 px;
+    word-wrap: break-word;
+}
+
+.formulario {
+    margin-top: 20px;
+    margin-left: 35px;
+    display: flex;
+}
+
+.tituloformulario {
+    background: #FFD200;
+}
+
+.logospng {
+    margin-left: 60px;
+    margin-top: -5%;
+    padding-top: 5%;
+    padding-right: 5%;
+}
+
+.datosredes {
+    margin-top: 0.5%;
+    display: flex;
+}
+
+.no-points {
+    list-style-type: none;
+    padding: 0;
+    /* Opcional: Elimina el padding por defecto del ul */
+    margin-top: -30px;
+}
+
+.direccion {
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: xx-small;
+    margin-left: 10px;
+}
+
+#circulos {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: -430px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 70%;
+
+    margin: 0 10px;
+    margin-left: 1px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.circle.clicked {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Sombra cuando se hace clic */
+}
+
+#circle1 {
+    background-color: yellow;
+}
+
+#circle2 {
+    background-color: rgb(230, 16, 159);
+}
+
+#circle3 {
+    background-color: black;
+}
+
+#message {
+    font-family: Arial, sans-serif;
+    /* Tipo de letra */
+    font-size: 12px;
+    /* Tamaño de letra base */
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -200px;
+}
+
+
+.history-section {
+    text-align: center;
+    padding: 0 2rem;
+    background-color: white;
+    margin-top: 10rem;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 1rem;
+}
+
+.section {
+    flex: 1 1 45%;
+    min-width: 300px;
+    margin: 1rem;
+    padding: 0;
+    background-color: #FFD500;
+    text-align: center;
+    border: 1px solid #000;
+    border-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.section.full-width {
+    flex: 1 1 100%;
+    border-radius: 10px;
+}
+
+.section h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #000;
+    border-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.section p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 1rem;
+}
+
+.instagram-logo {
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+.facebook-logo {
+    margin-left: 0px;
+    margin-top: -5px;
+}
+
+.whatsapp-logo {
+    margin-left: 5px;
+    margin-top: 0px;
+}
+
+
+
+/* Estilos para el carrito de compras*/
+.body_carrito {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.form-container_carrito {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.h1_carrito {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form_carrito {
+    display: flex;
+    flex-direction: column;
+}
+
+.label_carrito {
+    margin-bottom: 5px;
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #333;
+    font-size: 24px;
+
+}
+
+.input_carrito {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button_carrito {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button_carrito:hover {
+    background-color: #218838;
+}
+
+/*Fin de estilos del carrito de compras*/
+
+/* 
+######################
+Estilos para carrousel
+######################
+*/
+.contItemsCarrusel {
+    height: 600px;
+    overflow: hidden;
+    margin-top: 140px;
+    position: relative;
+}
+
+.itemCarrusel {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+.tarjetaCarrusel {
+    height: 100%;
+    width: 100%;
+}
+
+.flechaCarrusel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+.carrusel {
+    margin-top: 2px;
+    margin-left: 90px;
+    padding: 5px;
+
+}
+
+#tarjetaCarrusel-1 {
+    height: 100%;
+    width: 100%;
+}
+
+#tarjetaCarrusel-2 {
+    height: 100%;
+    width: 100%;
+}
+
+#tarjetaCarrusel-3 {
+    height: 100%;
+    width: 100%;
+}
+
+#contPuntos {
+    display: flex;
+    justify-content: space-around;
+    font-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#contPuntos>a {
+    font-size: 1.5em;
+    font-style: none;
+    color: #5B5B5F;
+}
+
+.divclass {
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 50%;
+    margin-top: 0px;
+    padding: 5px;
+    /*NO SE PUEDE PONER AL LADO DERECHO, margin: auto*/
+}
+
+.seccion1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*Fin de estilos para carrousel*/
+
+/* Estilos para el formulario de reclamaciones */
+.libro_container {
+    max-width: 600px;
+    margin: 170px auto 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form_reclamaciones {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form_group input,
+.form_group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn_enviar {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn_enviar:hover {
+    background-color: #218838;
+}
+
+
+.form_group{
+    justify-content: center;
+    text-align: center;
+}
+
+.btn_reclamo_enviar{
+    background-color:moccasin;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn_reclamo_enviar:hover {
+    background-color:burlywood;
+}
+
+.volver_carrito{
+    margin-top: 15px;
+    background-color:moccasin;
+    border-radius: 10px;
+    padding: 10px;
+    color:black;
+    font-family: "Neuton", serif;
+    font-size: 20px;
+}
+.volver_carrito:hover {
+    background-color:burlywood
+}

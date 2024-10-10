@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Byte Boost</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--fuente para el menu-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--fuente para byte-bost del header-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <!--fuente para men-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumar+One&display=swap"
+        rel="stylesheet">
+
+    <!-- FUENTE DE LETRA PARA EL FOOTER -->
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header_superior">
+            <div class="logo">
+                <div class="byte-boost-text">Byte-Boost</div>
+                <a href="index.html"><img src="imagenes/LOGO VERDADERO.png" alt=""
+                        style=" width: 65px; height: 62px;"></a>
+            </div>
+            <div class="principal">
+                <div class="search">
+                    <input type="search" placeholder="Buscar">
+                    <!-- <div class="loginyeso"> -->
+                    <a class="loginyeso" href="#"><img src="imagenes/login.png" alt="" width="26px" height="26px"></a>
+                    <a class="loginyeso" href="#"><img src="imagenes/like.png" alt="" width="26px" height="26px"></a>
+                    <a class="loginyeso" href="#"><img src="imagenes/shoping.png" alt="" width="26px" height="26px"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu_contenedor">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="nosotros.html">NOSOTROS</a></li>
+                        <li><a href="contactanos.html">CONTACTANOS</a></li>
+                        <li><a href="pagina_pc.html">PC</a></li>
+                        <li><a href="page_laptop.html">LAPTOPS</a></li>
+                        <li><a href="pagina_procesadores.html">COMPONENTES</a></li>
+                        <li><a href="carrito_compras.html"><img src="imagenes/carritocompras.png" alt="" height="26px"
+                                    width="26px"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="libro_container">
+            <h1>Libro de Reclamaciones</h1>
+            <form id="reclamacionesForm" class="form_reclamaciones">
+                <div class="form_group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres" required>
+                </div>
+                <div class="form_group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="form_group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form_group">
+                    <label for="telefono">Número de Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form_group">
+                    <label for="queja">Queja:</label>
+                    <textarea id="queja" name="queja" rows="4" required></textarea>
+                </div>
+                <div class="form_group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="form_group">
+                    <button type="button" onclick="submitReclamo()" class="btn_reclamo_enviar">Enviar</button>
+                </div>
+            </form>
+            <hr>
+            <p id="respuesta" class="text-center"> </p>
+            <script src="mensajeReclamo.js"> </script>   
+
+            <script>
+                // Establece la fecha actual en el campo de fecha
+                document.addEventListener('DOMContentLoaded', function() {
+                  var fecha = new Date().toISOString().substring(0, 10);
+                  document.getElementById('fecha').value = fecha;
+                });
+              </script>
+
+              <div>
+                 <center><a href="index.html"><button class="volver_carrito">Volver al Inicio</button></a></center>
+              </div>
+              
+        </div>        
+
+        <footer>
+            <div class="finalpiepagina2">
+                <div class="piedepagina2">
+                    <div class="logofinal">
+                        <img src="imagenes/LOGO VERDADERO.png" alt=""
+                            style="width: 65px; height: 62px; margin-left: 25px;">
+                        <div class="AladoLogo">¡Expertos en Tecnologia!</div>
+                    </div>
+                    <div class="logosderedessociales">
+
+                    </div>
+                    <div class="info">
+                        <h3 style="font-family: Inder, sans-serif">Información</h3>
+                        <p class="ainfo">Nuestras Tiendas</p>
+                        <p class="ainfo">Sobre Nosotros</p>
+                    </div>
+                    <div class="info">
+                        <h3 style="font-family: Inder, sans-serif">Políticas</h3>
+                        <p class="ainfo">Términos y condiciones</p>
+                        <p class="ainfo">Política de cookies</p>
+                        <p class="ainfo">Política de datos personales</p>
+                    </div>
+                    <div class="info">
+                        <h3 style="font-family: Inder, sans-serif">Contactos</h3>
+                        <p class="ainfo">Lineas Telefónicas</p>
+                        <p class="ainfo">945 458 125</p>
+                        <p class="ainfo">986 524 781</p>
+                    </div>
+
+                    <div>
+                        <a href="libroreclamo.html"><img src="img/libro_reclamacion.png" alt=""
+                                style="width:130px; height: 72px; margin-top: 10px;"></a>
+                    </div>
+                </div>
+
+                <div class="final">
+                    <div class="logosnegros">
+                        <a href="https://www.facebook.com/profile.php?id=61558654092768&mibextid=ZbWKwL"
+                            target="_blank"><img src="img/facebook_negro.png" alt="Logo" height="40px" width="40px"></a>
+                        <a href="https://www.instagram.com/byte_boostcomponents/" target="_blank"><img
+                                src="img/instagram_negro.png" alt="Logo" height="40px" width="40px"></a>
+                        <a href="https://chat.whatsapp.com/LdrAbWf2tdd5ECxmdc2uLo" target="_blank"><img
+                                src="img/whatsapp_negro.png" alt="Logo" height="40px" width="40px"></a>
+                        <a href="https://www.tiktok.com/@byteboost4?is_from_webapp=1&sender_device=pc"
+                            target="_blank"><img src="img/tik-tok_negro.png" alt="Logo" height="40px" width="40px"></a>
+                        <a href="https://www.youtube.com/channel/UCGtY66iHcW5RE_0PVPvHQ5Q" target="_blank"><img
+                                src="img/youtube_negro.png" alt="Logo" height="40px" width="40px"></a>
+                    </div>
+
+                    <div>
+                        <p class="derechosrese">© 2024 Byte Boost Computer. Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

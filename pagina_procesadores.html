@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesadores</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--fuente para byte-bost del header-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <!--fuente para men-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumar+One&display=swap"
+        rel="stylesheet">
+
+    <!-- FUENTE DE LETRA PARA EL FOOTER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: white;
+        }
+
+        .header_superior {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 7px;
+        }
+
+        .logo img {
+            /* width: 60px;
+    height: 62px; */
+            padding: 0px 0px 0px 5px;
+        }
+
+        .byte-boost-text {
+            font-family: "Kumar One", serif;
+            font-size: 20px;
+            margin-top: 10%;
+        }
+
+        .logo {
+            display: flex;
+        }
+
+        .search input {
+            width: 300px;
+            padding: 10px;
+            background: #F2EFE5;
+            border-radius: 5px;
+            border: 0.2px solid #BBBBBB;
+        }
+
+        .loginyeso {
+            margin: 10px 8px 0px 3px;
+        }
+
+        .principal {
+            display: flex;
+
+        }
+
+        /* BARRA MENU */
+        .menu_contenedor {
+            width: 100%;
+            height: 70%;
+            background: #FFD500;
+            padding: 0px 20px;
+
+        }
+
+
+        .menu {
+            max-width: 1200px;
+            margin: auto;
+            height: 100%;
+            font-family: "Inter", sans-serif;
+
+        }
+
+        nav {
+            height: 100%;
+
+        }
+
+        nav>ul {
+            height: 100%;
+            display: flex;
+
+        }
+
+        nav>ul>li {
+            height: 100%;
+            list-style: none;
+            position: relative;
+
+        }
+
+        nav>ul>li>a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            color: black;
+            align-items: center;
+            padding: 20px;
+            list-style: none;
+            font-size: 14px;
+            transition: all 300ms ease;
+        }
+
+        nav>ul>li>a:hover {
+            transform: scale(1.1);
+            background: #FFD500;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+        }
+
+        .top {
+            margin: 130px 0px 0px 30px;
+            margin-top: 220px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px 0px 0px 0px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card .box-data-extra {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .product-card .box-data-extra .box-especifications {
+            border: 1px solid #D9D9D9;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: #5B5B5F;
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: 220px;
+            object-fit: contain;
+        }
+
+        .product-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .product-discounted-price {
+            color: red;
+        }
+
+        .add-to-cart-button {
+            background-color: purple;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #00aaff;
+            /* Cambia el color a celeste o el que desees */
+        }
+
+        /* Estilos para la barra de navegación */
+        .navbar {
+            background-color: #333;
+            /* Fondo oscuro */
+            color: #fff;
+            /* Texto blanco */
+            padding: 10px;
+        }
+
+        /* Estilos para el icono del menú */
+        .menu-icon {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Estilos para la lista de categorías */
+        .categories {
+            display: none;
+            /* Ocultar inicialmente */
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Estilos para los elementos de la lista */
+        .categories a {
+            padding: 5px;
+            color: #F2EFE5;
+            display: block;
+        }
+
+        /* Mostrar la lista de categorías al hacer clic en el icono del menú */
+        .menu-icon:hover+.categories {
+            display: block;
+        }
+
+        .filter-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para las secciones del formulario */
+        .filter-section {
+            margin-bottom: 15px;
+        }
+
+        .avanzado {
+            border: #5B5B5F;
+            padding: 10px 0px;
+        }
+
+        .hr {
+            padding: 0px 0px 7px 0px;
+        }
+
+        /* Estilos para los títulos de sección */
+        .section-title {
+            font-weight: bold;
+        }
+
+        /* Estilos para las opciones de filtro */
+        .filter-option {
+            margin-bottom: 5px;
+        }
+
+        /* Estilos para el botón de búsqueda */
+        .search-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .centrar {
+            display: flex;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            justify-content: center;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        .pagination .active {
+            background-color: #89da5a;
+            color: #ffffff;
+            font-weight: 700;
+            border: transparent;
+        }
+
+        .pagination button {
+            background: #ffffff;
+            border-radius: 0.3rem;
+            border: transparent;
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .pagination button:hover {
+            background-color: #b3eb94;
+            color: #ffffff;
+            font-weight: 700;
+            border: transparent;
+
+            /* Cambia el color a celeste o el que desees */
+        }
+
+        .piedepagina1 {
+            width: 100%;
+            height: 70%;
+            background: #F5F4F9;
+            padding: 0px 20px;
+
+        }
+
+        .piedepagina2 {
+            width: 100%;
+            height: 70%;
+            background: #5B5B5F;
+            padding: 0px 20px;
+
+        }
+
+
+        /* PARA EL FOOTER */
+        .footer1 {
+            display: flex;
+            background: #D9D9D9;
+            padding: 20px 3px;
+
+        }
+
+        .imagen {
+            padding: 0px 0px 10px 0px;
+        }
+
+        .tecnico {
+            margin-top: 10px 0px 10px 0px;
+            margin: 0px 100px 0px 100px;
+            display: grid;
+            place-items: center;
+        }
+
+        .piedepagina2 {
+            display: flex;
+            margin: auto;
+            position: relative;
+            padding: 10px 10px;
+            width: 100%;
+            height: 70%;
+            background: #5B5B5F;
+            padding: 0px 20px;
+        }
+
+        .finalpiepagina2 {
+            border: 2px solid #000;
+            /* Borde del div contenedor */
+            background-color: #5B5B5F;
+            /* Color de fondo del div contenedor (opcional) */
+        }
+
+        .info {
+            margin: 0px 80px 0px 0px;
+            color: #FFFFFF;
+            font-family: "Inder", sans-serif;
+            /*NO LEE LA FUENTE*/
+            padding: 3px 30px;
+        }
+
+        .AladoLogo {
+            margin: 0px 10px 0px 0px;
+            color: white;
+            padding-left: 10px;
+            padding-top: 25px;
+        }
+
+        .derechosrese {
+            background: #5B5B5F;
+            padding-top: 10px;
+            padding-left: 100px;
+        }
+
+        .logofinal {
+            display: flex;
+        }
+
+        .final {
+            display: flex;
+            padding: 10px;
+        }
+
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 10px;
+    position: relative;
+}
+
+/* Estilos para el icono del menú */
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Estilos para la lista de categorías */
+.categories {
+    display: none; /* Ocultar inicialmente */
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 40px; /* Ajustar según la altura de la barra de navegación */
+    left: 10px; /* Ajustar según la posición deseada */
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+/* Estilos para los elementos de la lista */
+.categories a {
+    padding: 10px;
+    color: #F2EFE5;
+    display: block;
+    text-decoration: none;
+}
+
+/* Estilos para mostrar el dropdown cuando está activo */
+.categories.show {
+    display: block;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <header>
+            <div class="header_superior">
+                <div class="logo">
+                    <div class="byte-boost-text">Byte-Boost</div>
+                    <a href="index.html"><img src="imagenes/LOGO VERDADERO.png" alt=""
+                            style=" width: 65px; height: 62px;"></a>
+                </div>
+                <div class="principal">
+                    <div class="search">
+                        <input type="search" placeholder="Buscar">
+                        <!-- <div class="loginyeso"> -->
+                        <a class="loginyeso" href="#"><img src="imagenes/login.png" alt="" width="26px"
+                                height="26px"></a>
+                        <a class="loginyeso" href="#"><img src="imagenes/like.png" alt="" width="26px"
+                                height="26px"></a>
+                        <a class="loginyeso" href="#"><img src="imagenes/shoping.png" alt="" width="26px"
+                                height="26px"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_contenedor">
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">INICIO</a></li>
+                            <li><a href="nosotros.html">NOSOTROS</a></li>
+                            <li><a href="contactanos.html">CONTACTANOS</a></li>
+                            <li><a href="pagina_pc.html">PC</a></li>
+                            <li><a href="page_laptop.html">LAPTOPS</a></li>
+                            <li><a href="pagina_procesadores.html">COMPONENTES</a></li>
+                            <li><a href="carrito_compras.html"><img src="imagenes/carritocompras.png" alt="" height="26px"
+                                        width="26px"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="navbar">
+                <span class="menu-icon" onclick="toggleMenu()">☰</span> <!-- Icono de menú -->
+                Categorías <!-- Texto "Categorías" -->
+                <ul class="categories" id="menuCategories">
+                    <li><a href="">Procesadores</a></li>
+                    <li><a href="pagina_tarjetas_graficas.html">Tarjetas Gráficas</a></li>
+                    <li><a href="">Memorias Ram</a></li>
+                    <li><a href="">Discos Duros</a></li>
+                    <li><a href="">Placas Madre</a></li>
+                    <!-- Agrega más categorías aquí -->
+                </ul>
+            </div>
+        </header>
+
+        <div class="top">
+            <div class="centrar">
+                <div class="filter-form">
+                    <div class="filter-section">
+                        <center>
+                            <h4 class="avanzado">Filtro avanzado</h4>
+                        </center>
+                        <hr>
+                        <hr class="hr">
+                        <span class="section-title">Marca:</span>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="marca" value="Intel"
+                                @change="filterLaptops">Intel</label>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="marca" value="AMD"
+                                @change="filterLaptops">AMD</label>
+                        <br>
+                    </div>
+                    <div class="filter-section">
+                        <span class="section-title">Precio:</span>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="precio" value="500-1000"
+                            @change="filterLaptops"> S/. 500 - 1000</label>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="precio" value="1001-1500"
+                                @change="filterLaptops"> S/. 1000 - 1500</label>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="precio" value="1501-2000"
+                                @change="filterLaptops"> S/. 1500 - 2000</label>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="precio" value="2001-2500"
+                                @change="filterLaptops"> S/. 2000 - 2500</label>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="precio" value="2501-3000"
+                                @change="filterLaptops"> S/. 2500 - 3000</label>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="precio" value="3001-4000"
+                                @change="filterLaptops"> S/. 3000 - 4000</label>
+                    </div>
+                    <div class="filter-section">
+                        <span class="section-title">Video integrado:</span>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="video" value="si"
+                                @change="filterLaptops">Si</label>
+                        <br>
+                        <label class="filter-option"><input type="checkbox" name="video" value="no"
+                                @change="filterLaptops">No</label>
+                        <br>
+                    </div>
+                    <button class="search-button">Realizar búsqueda</button>
+                </div>
+
+
+
+                <div class="product-container">
+                    <div class="product-card" v-for="(laptop_item, laptop_item__index) in paginatedLaptops">
+                        <!-- <img src="imgpagincaPC/1pc.webp" alt="PC GAMER BLACK" class="product-image"> -->
+                        <div><img :src="laptop_item.img" alt="PC GAMER BLACK" class="product-image"></div>
+                        <div class="product-name">{{laptop_item.nombre}}</div>
+                        <div class="product-price">{{laptop_item.precio}}</div>
+                        <div class="product-discounted-price">{{laptop_item.p_oferta}}</div>
+                        <div class="box-data-extra">
+                            <button class="add-to-cart-button">Añadir Carrito</button>
+                            <div class="box-especifications">
+                                {{laptop_item.especifications}}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="product-card">
+                        <img src="imgpagincaPC/2pc.webp" alt="PC GAMER BLACK" class="product-image">
+                        <div class="product-name">PC GAMER BLACK</div>
+                        <div class="product-price">$3,487</div>
+                        <div class="product-discounted-price">$3,399</div>
+                        <button class="add-to-cart-button">Añadir Carrito</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="imgpagincaPC/3pc.webp" alt="PC GAMER BLACK" class="product-image">
+                        <div class="product-name">PC GAMER BLACK</div>
+                        <div class="product-price">$3,487</div>
+                        <div class="product-discounted-price">$3,399</div>
+                        <button class="add-to-cart-button">Añadir Carrito</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="imgpagincaPC/4pc.webp" alt="PC GAMER BLACK" class="product-image">
+                        <div class="product-name">PC GAMER BLACK</div>
+                        <div class="product-price">$3,487</div>
+                        <div class="product-discounted-price">$3,399</div>
+                        <button class="add-to-cart-button">Añadir Carrito</button>
+                    </div> -->
+
+
+                </div>
+            </div>
+            <div class="pagination">
+                <button @click="previousPage" :disabled="currentPage === 1">Anterior</button>
+                <button v-for="page in totalPages" :key="page" @click="goToPage(page)"
+                    :class="{ active: currentPage === page }">{{ page }}</button>
+                <button @click="nextPage" :disabled="currentPage === totalPages">Siguiente</button>
+            </div>
+        </div>
+
+
+        <!--PIE DE PAGINA-->
+        <footer>
+            <div class="footer">
+                <div class="footer1">
+                    <div class="tecnico">
+                        <img class="imagen" src="imagenes/SOPORTE.png" alt="" style=" width: 65px; height: 62px;">
+                        <h4>Ensamblado por expertos</h4>
+                        <p>Todos los equipos son ensamblados</p>
+                        <p>y pasan por pruebas de</p>
+                        <p>rendimiento/estabilidad</p>
+
+                        <!-- <img src="imagenes/foter1.jpeg" alt="" width="1348px" height="230px"> -->
+                    </div>
+                    <div class="tecnico">
+                        <img class="imagen" src="imagenes/CALENDARIO.png" alt="" style=" width: 65px; height: 62px;">
+                        <h4>12 Meses de Garantia</h4>
+                        <p>Todos los componentes tienen</p>
+                        <p>garantia individual por falla de</p>
+                        <p>fabrica</p>
+                    </div>
+                    <div class="tecnico">
+                        <img class="imagen" src="imagenes/SATISFACCION.png" alt="" style=" width: 65px; height: 62px;">
+                        <h4>Satisfaccion Garantizada</h4>
+                        <p>Se eligio cuidadosamente cada</p>
+                        <p>compoente para garantizar el</p>
+                        <P>maximo rendimiento de un equipo</P>
+                    </div>
+
+                </div>
+
+                <div class="finalpiepagina2">
+                    <div class="piedepagina2">
+                        <div class="logofinal">
+                            <img src="imagenes/LOGO VERDADERO.png" alt=""
+                                style="width: 65px; height: 62px; margin-left: 25px;">
+                            <div class="AladoLogo">¡Expertos en Tecnologia!</div>
+                        </div>
+                        <div class="logosderedessociales">
+
+                        </div>
+                        <div class="info">
+                            <h3 style="font-family: Inder, sans-serif">Información</h3>
+                            <p class="ainfo">Nuestras Tiendas</p>
+                            <p class="ainfo">Sobre Nosotros</p>
+                        </div>
+                        <div class="info">
+                            <h3 style="font-family: Inder, sans-serif">Políticas</h3>
+                            <p class="ainfo">Términos y condiciones</p>
+                            <p class="ainfo">Política de cookies</p>
+                            <p class="ainfo">Política de datos personales</p>
+                        </div>
+                        <div class="info">
+                            <h3 style="font-family: Inder, sans-serif">Contactos</h3>
+                            <p class="ainfo">Lineas Telefónicas</p>
+                            <p class="ainfo">945 458 125</p>
+                            <p class="ainfo">986 524 781</p>
+                        </div>
+
+                        <div>
+                            <a href="libroreclamo.html"><img src="img/libro_reclamacion.png" alt=""
+                                style="width:130px; height: 72px; margin-top: 10px;"></a>
+                        </div>
+                    </div>
+
+                    <div class="final">
+                        <div class="logosnegros">
+                            <a href="https://www.facebook.com/profile.php?id=61558654092768&mibextid=ZbWKwL"><img
+                                    src="img/facebook_negro.png" alt="Logo" height="40px" width="40px"></a>
+                            <a href="https://www.instagram.com/byte_boostcomponents/"><img src="img/instagram_negro.png"
+                                    alt="Logo" height="40px" width="40px"></a>
+                            <a href="https://chat.whatsapp.com/LdrAbWf2tdd5ECxmdc2uLo"><img src="img/whatsapp_negro.png"
+                                    alt="Logo" height="40px" width="40px"></a>
+                            <a href="https://www.tiktok.com/@byteboost4?is_from_webapp=1&sender_device=pc"><img
+                                    src="img/tik-tok_negro.png" alt="Logo" height="40px" width="40px"></a>
+                            <a href="https://www.youtube.com/channel/UCGtY66iHcW5RE_0PVPvHQ5Q"><img
+                                    src="img/youtube_negro.png" alt="Logo" height="40px" width="40px"></a>
+                        </div>
+
+                        <div>
+                            <p class="derechosrese">© 2024 Byte Boost Computer. Todos los derechos reservados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menuCategories');
+            menu.classList.toggle('show');
+        }
+        </script>
+        
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                arrayLaptops: [
+                    { id: 1, nombre: "Intel Core I3", precio: "S/. 520", p_oferta: "S/. 500", img: "imgpaginaProcesadores/producto3.jpeg", brand: "Intel", video_integrated: "si", especifications: "CORE I3-14100F 3.50GHZ/4.70GHZ 12MB 4 CORE LGA1700" },
+                    { id: 2, nombre: "Intel Core I5", precio: "S/. 730", p_oferta: "S/. 650", img: "imgpaginaProcesadores/producto2.jpeg", brand: "Intel", video_integrated: "no", especifications: "CORE I5-14400F 2.50GHZ/4.70GHZ 20MB 10 CORE LGA1700" },
+                    { id: 3, nombre: "Intel Core I7", precio: "S/. 1050", p_oferta: "S/. 1020", img: "imgpaginaProcesadores/producto1.jpeg", brand: "Intel", video_integrated: "si", especifications: "CORE I7-14700F 2.10GHZ/5.40GHZ 33MB 20 CORE LGA1700" },
+                    { id: 4, nombre: "AMD Ryzen 5", precio: "S/. 600", p_oferta: "S/. 550", img: "imgpaginaProcesadores/producto5.jpeg", brand: "AMD", video_integrated: "no", especifications: "RYZEN 5 8600G 4.3GHz/5.0GHz 16MB 6 CORE AM5 BOX" },
+                    { id: 5, nombre: "AMD Ryzen 7", precio: "S/. 800", p_oferta: "S/. 750", img: "imgpaginaProcesadores/producto4.jpeg", brand: "AMD", video_integrated: "si", especifications: "RYZEN 7 8700G 4.2GHz /5.1GHz 16MB 8 CORE AM5 BOX" },
+                ],
+                selectedBrands: [],
+                selectedPriceRanges: [],
+                currentPage: 1,
+                productsPerPage: 4,
+                videoIntegratedFilter: []
+            },
+            methods: {
+                filterLaptops() {
+                    this.selectedBrands = [...document.querySelectorAll('input[name="marca"]:checked')].map(checkbox => checkbox.value);
+                    this.selectedPriceRanges = [...document.querySelectorAll('input[name="precio"]:checked')].map(checkbox => checkbox.value);
+                    this.videoIntegratedFilter = [...document.querySelectorAll('input[name="video"]:checked')].map(checkbox => checkbox.value);
+                    //const selectedVideoOption = document.querySelector('input[name="video"]:checked');
+                    //const videoIntegrated = selectedVideoOption ? selectedVideoOption.value : '';
+
+                    // Actualiza el estado de los datos
+                    //this.videoIntegratedFilter = videoIntegrated;
+                },
+                previousPage() {
+                    if (this.currentPage > 1) {
+                        this.currentPage--;
+                    }
+                },
+                nextPage() {
+                    if (this.currentPage < this.totalPages) {
+                        this.currentPage++;
+                    }
+                },
+                goToPage(page) {
+                    this.currentPage = page;
+                },
+            },
+            computed: {
+                paginatedLaptops() {
+                    const startIndex = (this.currentPage - 1) * this.productsPerPage;
+                    const endIndex = startIndex + this.productsPerPage;
+                    return this.filteredLaptops.slice(startIndex, endIndex);
+                },
+                totalPages() {
+                    return Math.ceil(this.filteredLaptops.length / this.productsPerPage);
+                },
+                filteredLaptops() {
+                    let laptops = this.arrayLaptops;
+
+                    // Filtra por marcas seleccionadas
+                    if (this.selectedBrands.length > 0) {
+                        laptops = laptops.filter(laptop => this.selectedBrands.includes(laptop.brand));
+                    }
+
+                    // Filtra por rangos de precios seleccionados
+                    if (this.selectedPriceRanges.length > 0) {
+                        laptops = laptops.filter(laptop => {
+                            for (const range of this.selectedPriceRanges) {
+                                const [minPrice, maxPrice] = range.split('-').map(Number);
+                                const laptopPrice = Number(laptop.p_oferta.replace('S/. ', '').replace(',', ''));
+                                if (laptopPrice >= minPrice && laptopPrice <= maxPrice) {
+                                    return true;
+                                }
+                            }
+                            return false;
+                        });
+                    }
+
+                    // Filtra por marcas seleccionadas
+                     if (this.videoIntegratedFilter.length > 0) {
+                        laptops = laptops.filter(laptop => this.videoIntegratedFilter.includes(laptop.video_integrated));
+                    }
+
+                    //if (this.videoIntegratedFilter !== undefined) {
+                      //  laptops = laptops.filter(laptop => laptop.video_integrated === this.videoIntegratedFilter);
+                    //}
+
+                    return laptops;
+                }
+            },
+            created() {
+                console.log("Hola mundo");
+            }
+        });
+    </script>
+</body>
+
+</html>
